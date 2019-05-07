@@ -1,0 +1,56 @@
+{
+    "type": "object",
+    "properties": {
+        "login": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "authtoken": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "properties": {
+                "hook": {
+                    "properties": {
+                        "event": {
+                            "description": "Event associated with Hook",
+                            "enum": [
+                                "order_updated",
+                                "order_pending_payment",
+                                "order_paid",
+                                "order_shipped",
+                                "order_canceled",
+                                "order_abandoned",
+                                "product_created",
+                                "product_updated",
+                                "product_deleted",
+                                "customer_created",
+                                "customer_updated",
+                                "customer_deleted"
+                            ],
+                            "type": "string"
+                        },
+                        "url": {
+                            "description": "Hook URL to be notified",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "event",
+                        "url"
+                    ],
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "type": "object",
+    "properties": {
+        "login": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "authtoken": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "properties": {
+                "order_history": {
+                    "properties": {
+                        "message": {
+                            "description": "Message of the Order History",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

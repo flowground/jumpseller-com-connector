@@ -1,0 +1,135 @@
+{
+    "type": "object",
+    "properties": {
+        "login": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "authtoken": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "properties": {
+                "promotion": {
+                    "properties": {
+                        "begins_at": {
+                            "description": "Creation date of the promotion (requires 'lasts' param - 'date')",
+                            "type": "string"
+                        },
+                        "buys_at_least": {
+                            "description": "Controls the promotion's condition ('none', 'price', 'qty')",
+                            "type": "string"
+                        },
+                        "categories": {
+                            "description": "Products Categories where the promotion will be applied (requires 'discount_target' param - 'categories')",
+                            "items": {
+                                "properties": {
+                                    "id": {
+                                        "format": "int32",
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "code": {
+                            "description": "Code of the promotion",
+                            "type": "string"
+                        },
+                        "condition_price": {
+                            "description": "Minimum order amount to validate the promotion (requires 'buys_at_least' param - 'price')",
+                            "format": "float",
+                            "type": "number"
+                        },
+                        "condition_qty": {
+                            "description": "Minimum quantity of ordered itens to validate the promotion (requires 'buys_at_least' param - 'qty')",
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "cumulative": {
+                            "default": false,
+                            "description": "True if the promotion can be acumulated with others",
+                            "type": "boolean"
+                        },
+                        "customer_categories": {
+                            "description": "Customer Categories to whom the promotion will be applied (requires 'customers' param - 'categories')",
+                            "items": {
+                                "properties": {
+                                    "id": {
+                                        "format": "int32",
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "customers": {
+                            "description": "Controls to which customers the promotion will be applied ('all', 'loggedin', 'categories')",
+                            "type": "string"
+                        },
+                        "discount_amount_fix": {
+                            "description": "Fixed discount amount of the promotion (requires 'type' param - 'fix')",
+                            "format": "float",
+                            "type": "number"
+                        },
+                        "discount_amount_percent": {
+                            "description": "Percentual discount amount of the promotion (requires 'type' param - 'percentage')",
+                            "format": "float",
+                            "type": "number"
+                        },
+                        "discount_target": {
+                            "description": "Where the promotion will be applied ('order', 'shipping', 'categories')",
+                            "type": "string"
+                        },
+                        "expires_at": {
+                            "description": "Expiration date of the promotion (requires 'lasts' param - 'date')",
+                            "type": "string"
+                        },
+                        "lasts": {
+                            "description": "Controls when the promotion will expire ('none', 'date', 'max_times_used')",
+                            "type": "string"
+                        },
+                        "max_times_used": {
+                            "description": "Maximum amount a promotion can be used (requires 'lasts' param - 'max_times_used')",
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "name": {
+                            "description": "Name of the product",
+                            "type": "string"
+                        },
+                        "products": {
+                            "description": "Products where the promotion will be applied (requires 'discount_target' param - 'categories')",
+                            "items": {
+                                "properties": {
+                                    "id": {
+                                        "format": "int32",
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "type": {
+                            "description": "Controls if the discount will be a fixed area ('fix', 'percentage')",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "type": "object",
+    "properties": {
+        "login": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "authtoken": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "field": {
+                    "properties": {
+                        "id": {
+                            "description": "Unique identifier of the Field",
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "label": {
+                            "description": "Label given to the Field",
+                            "type": "string"
+                        },
+                        "type": {
+                            "description": "Type of the Field",
+                            "enum": [
+                                "text",
+                                "selection",
+                                "input"
+                            ],
+                            "type": "string"
+                        },
+                        "values": {
+                            "description": "All the possible Values of the Field (for type 'selection')",
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

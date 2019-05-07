@@ -1,0 +1,112 @@
+{
+    "type": "object",
+    "properties": {
+        "login": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "authtoken": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "order": {
+                    "properties": {
+                        "additional_information": {
+                            "description": "Additional information for the given Order",
+                            "type": "string"
+                        },
+                        "customer": {
+                            "properties": {
+                                "email": {
+                                    "description": "Email of the customer for the given Order",
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "products": {
+                            "items": {
+                                "properties": {
+                                    "discount": {
+                                        "description": "Discount of the Order Product",
+                                        "format": "float",
+                                        "type": "number"
+                                    },
+                                    "id": {
+                                        "description": "Unique identifier of the original Product",
+                                        "format": "int32",
+                                        "type": "integer"
+                                    },
+                                    "image": {
+                                        "description": "Image URL of the Order Product",
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "description": "Name of the Order Product",
+                                        "type": "string"
+                                    },
+                                    "price": {
+                                        "description": "Price of the Order Product",
+                                        "format": "float",
+                                        "type": "number"
+                                    },
+                                    "qty": {
+                                        "description": "Price of the Order Product",
+                                        "format": "int32",
+                                        "type": "integer"
+                                    },
+                                    "sku": {
+                                        "description": "Stock Keeping Unit of the Order Product",
+                                        "type": "string"
+                                    },
+                                    "variant_id": {
+                                        "description": "Unique identifier of the original Product Variant",
+                                        "format": "int32",
+                                        "type": "integer"
+                                    },
+                                    "weight": {
+                                        "default": 1,
+                                        "description": "Weight of the Order Product",
+                                        "format": "float",
+                                        "type": "number"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "shipping_method_id": {
+                            "description": "Shipping method e.g. Royal Mail",
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "status": {
+                            "description": "Status of the Order",
+                            "enum": [
+                                "Abandoned",
+                                "Canceled",
+                                "Pending Payment",
+                                "Paid"
+                            ],
+                            "type": "string"
+                        },
+                        "tracking_company": {
+                            "description": "Shipping Company used for the given Order",
+                            "type": "string"
+                        },
+                        "tracking_number": {
+                            "description": "Shipping Tracking Number used for the given Order",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,144 @@
+{
+    "type": "object",
+    "properties": {
+        "login": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "authtoken": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "product": {
+                    "properties": {
+                        "categories": {
+                            "items": {
+                                "properties": {
+                                    "id": {
+                                        "description": "Unique identifier of the Category",
+                                        "format": "int32",
+                                        "type": "integer"
+                                    },
+                                    "name": {
+                                        "description": "Name of the Category",
+                                        "type": "string"
+                                    },
+                                    "parent_id": {
+                                        "description": "Unique identifier of the Parent Category",
+                                        "format": "int32",
+                                        "type": "integer"
+                                    },
+                                    "permalink": {
+                                        "description": "Category unique URL path",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "description": {
+                            "description": "Description of the product",
+                            "type": "string"
+                        },
+                        "diameter": {
+                            "description": "Diameter of the product",
+                            "format": "float",
+                            "type": "number"
+                        },
+                        "featured": {
+                            "default": false,
+                            "description": "True if the product is featured",
+                            "type": "boolean"
+                        },
+                        "height": {
+                            "description": "Height of the product",
+                            "format": "float",
+                            "type": "number"
+                        },
+                        "length": {
+                            "description": "Length of the product",
+                            "format": "float",
+                            "type": "number"
+                        },
+                        "meta_description": {
+                            "description": "SEO meta description of the product",
+                            "type": "string"
+                        },
+                        "name": {
+                            "description": "Name of the product",
+                            "type": "string"
+                        },
+                        "package_format": {
+                            "default": "box",
+                            "description": "Format the product package",
+                            "enum": [
+                                "box",
+                                "cylinder"
+                            ],
+                            "type": "string"
+                        },
+                        "page_title": {
+                            "description": "SEO title of the product",
+                            "type": "string"
+                        },
+                        "permalink": {
+                            "description": "Product unique URL path",
+                            "type": "string"
+                        },
+                        "price": {
+                            "description": "Price of the product",
+                            "format": "float",
+                            "type": "number"
+                        },
+                        "sku": {
+                            "description": "Stock Keeping Unit of the product",
+                            "type": "string"
+                        },
+                        "status": {
+                            "default": "available",
+                            "description": "Status of the product",
+                            "enum": [
+                                "available",
+                                "not-available",
+                                "disabled"
+                            ],
+                            "type": "string"
+                        },
+                        "stock": {
+                            "default": 100,
+                            "description": "Quantity in stock for the product",
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "stock_unlimited": {
+                            "description": "True if the Product has unlimited stock",
+                            "type": "boolean"
+                        },
+                        "weight": {
+                            "default": 1,
+                            "description": "Weight of the product",
+                            "format": "float",
+                            "type": "number"
+                        },
+                        "width": {
+                            "description": "Width of the product",
+                            "format": "float",
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "price",
+                        "name"
+                    ],
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

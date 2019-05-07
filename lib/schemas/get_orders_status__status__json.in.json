@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "login": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "authtoken": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "status": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "Abandoned",
+                "Canceled",
+                "Pending Payment",
+                "Paid"
+            ]
+        }
+    }
+}

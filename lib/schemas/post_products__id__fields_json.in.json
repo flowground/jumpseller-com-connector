@@ -1,0 +1,42 @@
+{
+    "type": "object",
+    "properties": {
+        "login": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "authtoken": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "properties": {
+                "field_value": {
+                    "properties": {
+                        "id": {
+                            "description": "Unique identifier of the ProductCustomField",
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "value": {
+                            "description": "The value for the ProductCustomField",
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

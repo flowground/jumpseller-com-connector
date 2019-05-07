@@ -1,0 +1,39 @@
+{
+    "type": "object",
+    "properties": {
+        "login": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "authtoken": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "properties": {
+                "customer_additional_field": {
+                    "properties": {
+                        "checkout_custom_field_id": {
+                            "description": "Unique identifier of the Checkout Custom Field",
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "value": {
+                            "description": "Value of the Customer Additional Field",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

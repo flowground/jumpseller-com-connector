@@ -1,0 +1,1671 @@
+{
+    "title": "Jumpseller API",
+    "description": "Explore all our endpoints with your own set of of access tokens. All changes affect your production Jumpseller store.",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/jumpseller.com/1/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.jumpseller.com/v1",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "get_apps_json": {
+            "main": "./lib/actions/get_apps_json.js",
+            "title": "Retrieve all Jumpseller Apps.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_apps_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_categories_json": {
+            "main": "./lib/actions/get_categories_json.js",
+            "title": "Retrieve all Categories.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_categories_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_categories_json": {
+            "main": "./lib/actions/post_categories_json.js",
+            "title": "Create a new Category.",
+            "description": "Category's permalink is automatically generated from the given category's name.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_categories_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_categories__id__json": {
+            "main": "./lib/actions/delete_categories__id__json.js",
+            "title": "Delete an existing Category.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_categories__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_categories__id__json": {
+            "main": "./lib/actions/get_categories__id__json.js",
+            "title": "Retrieve a single Category.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_categories__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_categories__id__json": {
+            "main": "./lib/actions/put_categories__id__json.js",
+            "title": "Modify an existing Category.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_categories__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_checkout_custom_fields_json": {
+            "main": "./lib/actions/get_checkout_custom_fields_json.js",
+            "title": "Retrieve all Checkout Custom Fields.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_checkout_custom_fields_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_checkout_custom_fields_json": {
+            "main": "./lib/actions/post_checkout_custom_fields_json.js",
+            "title": "Create a new CheckoutCustomField.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_checkout_custom_fields_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_checkout_custom_fields__id__json": {
+            "main": "./lib/actions/delete_checkout_custom_fields__id__json.js",
+            "title": "Delete an existing CheckoutCustomField.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_checkout_custom_fields__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_checkout_custom_fields__id__json": {
+            "main": "./lib/actions/get_checkout_custom_fields__id__json.js",
+            "title": "Retrieve a single CheckoutCustomField.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_checkout_custom_fields__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_checkout_custom_fields__id__json": {
+            "main": "./lib/actions/put_checkout_custom_fields__id__json.js",
+            "title": "Update a CheckoutCustomField.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_checkout_custom_fields__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_countries_json": {
+            "main": "./lib/actions/get_countries_json.js",
+            "title": "Retrieve all Countries.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_countries_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_countries__country_code__json": {
+            "main": "./lib/actions/get_countries__country_code__json.js",
+            "title": "Retrieve a single Country information.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_countries__country_code__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_countries__country_code__regions_json": {
+            "main": "./lib/actions/get_countries__country_code__regions_json.js",
+            "title": "Retrieve all Regions from a single Country.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_countries__country_code__regions_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_countries__country_code__regions__region_code__json": {
+            "main": "./lib/actions/get_countries__country_code__regions__region_code__json.js",
+            "title": "Retrieve a single Region information object.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_countries__country_code__regions__region_code__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_customer_categories_json": {
+            "main": "./lib/actions/get_customer_categories_json.js",
+            "title": "Retrieve all Customer Categories.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_customer_categories_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_customer_categories_json": {
+            "main": "./lib/actions/post_customer_categories_json.js",
+            "title": "Create a new CustomerCategory.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_customer_categories_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_customer_categories__id__json": {
+            "main": "./lib/actions/delete_customer_categories__id__json.js",
+            "title": "Delete an existing CustomerCategory.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_customer_categories__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_customer_categories__id__json": {
+            "main": "./lib/actions/get_customer_categories__id__json.js",
+            "title": "Retrieve a single CustomerCategory.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_customer_categories__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_customer_categories__id__json": {
+            "main": "./lib/actions/put_customer_categories__id__json.js",
+            "title": "Update a CustomerCategory.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_customer_categories__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_customer_categories__id__customers_json": {
+            "main": "./lib/actions/delete_customer_categories__id__customers_json.js",
+            "title": "Delete Customers from an existing CustomerCategory.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_customer_categories__id__customers_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_customer_categories__id__customers_json": {
+            "main": "./lib/actions/get_customer_categories__id__customers_json.js",
+            "title": "Retrieves the customers in a CustomerCategory.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_customer_categories__id__customers_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_customer_categories__id__customers_json": {
+            "main": "./lib/actions/post_customer_categories__id__customers_json.js",
+            "title": "Adds Customers to a CustomerCategory.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_customer_categories__id__customers_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_customers_json": {
+            "main": "./lib/actions/get_customers_json.js",
+            "title": "Retrieve all Customers.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_customers_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_customers_json": {
+            "main": "./lib/actions/post_customers_json.js",
+            "title": "Create a new Customer.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_customers_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_customers_email__email__json": {
+            "main": "./lib/actions/get_customers_email__email__json.js",
+            "title": "Retrieve a single Customer.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_customers_email__email__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_customers__id__json": {
+            "main": "./lib/actions/delete_customers__id__json.js",
+            "title": "Delete an existing Category.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_customers__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_customers__id__json": {
+            "main": "./lib/actions/get_customers__id__json.js",
+            "title": "Retrieve a single Customer.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_customers__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_customers__id__json": {
+            "main": "./lib/actions/put_customers__id__json.js",
+            "title": "Update a new Customer.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_customers__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_customers__id__fields": {
+            "main": "./lib/actions/get_customers__id__fields.js",
+            "title": "Retrieves the Customer Additional Field of a Customer.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_customers__id__fields.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_customers__id__fields": {
+            "main": "./lib/actions/post_customers__id__fields.js",
+            "title": "Adds Customer Additional Fields to a Customer.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_customers__id__fields.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_customers__id__fields__field_id_": {
+            "main": "./lib/actions/delete_customers__id__fields__field_id_.js",
+            "title": "Delete a Customer Additional Field.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_customers__id__fields__field_id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_customers__id__fields__field_id_": {
+            "main": "./lib/actions/get_customers__id__fields__field_id_.js",
+            "title": "Create a new Customer Additional Field.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_customers__id__fields__field_id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_fields_json": {
+            "main": "./lib/actions/get_fields_json.js",
+            "title": "Retrieve all Store's Custom Fields.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_fields_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_fields_json": {
+            "main": "./lib/actions/post_fields_json.js",
+            "title": "Create a new Custom Field.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_fields_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_hooks_json": {
+            "main": "./lib/actions/get_hooks_json.js",
+            "title": "Retrieve all Hooks.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_hooks_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_hooks_json": {
+            "main": "./lib/actions/post_hooks_json.js",
+            "title": "Create a new Hook.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_hooks_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_hooks__id__json": {
+            "main": "./lib/actions/delete_hooks__id__json.js",
+            "title": "Delete an existing Hook.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_hooks__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_hooks__id__json": {
+            "main": "./lib/actions/get_hooks__id__json.js",
+            "title": "Retrieve a single Hook.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_hooks__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_hooks__id__json": {
+            "main": "./lib/actions/put_hooks__id__json.js",
+            "title": "Update a Hook.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_hooks__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_jsapps_json": {
+            "main": "./lib/actions/post_jsapps_json.js",
+            "title": "Create a Store JSApp",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_jsapps_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_jsapps__code__json": {
+            "main": "./lib/actions/delete_jsapps__code__json.js",
+            "title": "Delete an existing JSApp.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_jsapps__code__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_jsapps__code__json": {
+            "main": "./lib/actions/get_jsapps__code__json.js",
+            "title": "Retrieve a JSApp",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_jsapps__code__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_orders_json": {
+            "main": "./lib/actions/get_orders_json.js",
+            "title": "Retrieve all Orders.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_orders_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_orders_json": {
+            "main": "./lib/actions/post_orders_json.js",
+            "title": "Create a new Order.",
+            "description": "Use the JSON format:<br/>'{ \"order\": {\"status\": \"Paid\", \"shipping_method_id\": 123, \"products\": [{ \"id\": 123, \"qty\": 1}], \"customer\": {\"id\": 123}}}'<br/>or in CURL:<br/>curl -X POST -d '{ \"order\": {\"status\": \"Paid\", \"shipping_method_id\": 123, \"products\": [{ \"id\": 123, \"qty\": 1}], \"customer\": {\"id\": 123}}}' \"https://api.jumpseller.com/v1/orders.json?login=storecode&authtoken=XXXXX\" -H \"Content-Type:application/json\" ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_orders_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_orders_after__id__json": {
+            "main": "./lib/actions/get_orders_after__id__json.js",
+            "title": "Retrieve orders filtered by Order Id.",
+            "description": "For example the GET /orders/after/5000 will return Order 5001, 5002, 5003, etc.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_orders_after__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_orders_count_json": {
+            "main": "./lib/actions/get_orders_count_json.js",
+            "title": "Count all Orders.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_orders_count_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_orders_status__status__json": {
+            "main": "./lib/actions/get_orders_status__status__json.js",
+            "title": "Retrieve orders filtered by status.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_orders_status__status__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_orders__id__json": {
+            "main": "./lib/actions/get_orders__id__json.js",
+            "title": "Retrieve a single Order.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_orders__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_orders__id__json": {
+            "main": "./lib/actions/put_orders__id__json.js",
+            "title": "Modify an existing Order.",
+            "description": "Only 'status', 'tracking_number', 'tracking_company', 'additional_information' and 'additional_fields' are available for update.<br/>Use the JSON format:<br/>'{ \"order\": {\"status\": \"Paid\", \"tracking_company\": \"other\", \"tracking_number\": \"123456789\", \"additional_information\": \"My custom message.\", \"additional_fields\": [{\"label\": \"Gift Name\", \"value\": \"Duarte\"}, {\"label\": \"Gift Wrapping Color\", \"value\": \"Green\"}]} }}'<br/>or in CURL:<br/>curl -X PUT -d '{ \"order\": {\"status\": \"Paid\", \"additional_information\": \"My custom message.\"}}' \"https://api.jumpseller.com/v1/orders/{id}.json?login=storecode&authtoken=XXXXX\" -H \"Content-Type:application/json\" ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_orders__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_orders__id__history_json": {
+            "main": "./lib/actions/get_orders__id__history_json.js",
+            "title": "Retrieve all Order History.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_orders__id__history_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_orders__id__history_json": {
+            "main": "./lib/actions/post_orders__id__history_json.js",
+            "title": "Create a new Order History Entry.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_orders__id__history_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_payment_methods_json": {
+            "main": "./lib/actions/get_payment_methods_json.js",
+            "title": "Retrieve all Store's Payment Methods.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_payment_methods_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_payment_methods__id__json": {
+            "main": "./lib/actions/get_payment_methods__id__json.js",
+            "title": "Retrieve a single Payment Method.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_payment_methods__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_products_json": {
+            "main": "./lib/actions/get_products_json.js",
+            "title": "Retrieve all Products.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_products_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_products_json": {
+            "main": "./lib/actions/post_products_json.js",
+            "title": "Create a new Product.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_products_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_products_after__id__json": {
+            "main": "./lib/actions/get_products_after__id__json.js",
+            "title": "Retrieves Products after the given id.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_products_after__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_products_category__category_id__json": {
+            "main": "./lib/actions/get_products_category__category_id__json.js",
+            "title": "Retrieve Products filtered by category.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_products_category__category_id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_products_category__category_id__count_json": {
+            "main": "./lib/actions/get_products_category__category_id__count_json.js",
+            "title": "Count Products filtered by category.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_products_category__category_id__count_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_products_count_json": {
+            "main": "./lib/actions/get_products_count_json.js",
+            "title": "Count all Products.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_products_count_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_products_search_json": {
+            "main": "./lib/actions/get_products_search_json.js",
+            "title": "Retrieve a Product List from a query.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_products_search_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_products_sku__sku__json": {
+            "main": "./lib/actions/get_products_sku__sku__json.js",
+            "title": "Retrieve a single Product by SKU.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_products_sku__sku__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_products_status__status__json": {
+            "main": "./lib/actions/get_products_status__status__json.js",
+            "title": "Retrieve Products filtered by status.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_products_status__status__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_products_status__status__count_json": {
+            "main": "./lib/actions/get_products_status__status__count_json.js",
+            "title": "Count Products filtered by status.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_products_status__status__count_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_products__id__json": {
+            "main": "./lib/actions/delete_products__id__json.js",
+            "title": "Delete an existing Product.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_products__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_products__id__json": {
+            "main": "./lib/actions/get_products__id__json.js",
+            "title": "Retrieve a single Product.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_products__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_products__id__json": {
+            "main": "./lib/actions/put_products__id__json.js",
+            "title": "Modify an existing Product.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_products__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_products__id__fields_json": {
+            "main": "./lib/actions/get_products__id__fields_json.js",
+            "title": "Retrieve all Product Custom Fields",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_products__id__fields_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_products__id__fields_json": {
+            "main": "./lib/actions/post_products__id__fields_json.js",
+            "title": "Create a new Product Custom Field.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_products__id__fields_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_products__id__fields_count_json": {
+            "main": "./lib/actions/get_products__id__fields_count_json.js",
+            "title": "Count all Product Custom Fields.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_products__id__fields_count_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_products__id__images_json": {
+            "main": "./lib/actions/get_products__id__images_json.js",
+            "title": "Retrieve all Product Images.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_products__id__images_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_products__id__images_json": {
+            "main": "./lib/actions/post_products__id__images_json.js",
+            "title": "Create a new Product Image.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_products__id__images_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_products__id__images_count_json": {
+            "main": "./lib/actions/get_products__id__images_count_json.js",
+            "title": "Count all Product Images.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_products__id__images_count_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_products__id__images__image_id__json": {
+            "main": "./lib/actions/delete_products__id__images__image_id__json.js",
+            "title": "Delete a Product Image.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_products__id__images__image_id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_products__id__images__image_id__json": {
+            "main": "./lib/actions/get_products__id__images__image_id__json.js",
+            "title": "Create a new Product Image.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_products__id__images__image_id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_products__id__options_json": {
+            "main": "./lib/actions/get_products__id__options_json.js",
+            "title": "Retrieve all Product Options.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_products__id__options_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_products__id__options_json": {
+            "main": "./lib/actions/post_products__id__options_json.js",
+            "title": "Create a new Product Option.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_products__id__options_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_products__id__options_count_json": {
+            "main": "./lib/actions/get_products__id__options_count_json.js",
+            "title": "Count all Product Options.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_products__id__options_count_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_products__id__options__option_id__json": {
+            "main": "./lib/actions/delete_products__id__options__option_id__json.js",
+            "title": "Delete a Product Option.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_products__id__options__option_id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_products__id__options__option_id__json": {
+            "main": "./lib/actions/get_products__id__options__option_id__json.js",
+            "title": "Create a new Product Option.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_products__id__options__option_id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_products__id__options__option_id__json": {
+            "main": "./lib/actions/put_products__id__options__option_id__json.js",
+            "title": "Modify an existing Product Option.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_products__id__options__option_id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_products__id__options__option_id__values_json": {
+            "main": "./lib/actions/get_products__id__options__option_id__values_json.js",
+            "title": "Retrieve all Product Option Values.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_products__id__options__option_id__values_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_products__id__options__option_id__values_json": {
+            "main": "./lib/actions/post_products__id__options__option_id__values_json.js",
+            "title": "Create a new Product Option Value.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_products__id__options__option_id__values_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_products__id__options__option_id__values_count_json": {
+            "main": "./lib/actions/get_products__id__options__option_id__values_count_json.js",
+            "title": "Count all Product Option Values.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_products__id__options__option_id__values_count_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_products__id__options__option_id__values__value_id__json": {
+            "main": "./lib/actions/delete_products__id__options__option_id__values__value_id__json.js",
+            "title": "Delete a Product Option Value.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_products__id__options__option_id__values__value_id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_products__id__options__option_id__values__value_id__json": {
+            "main": "./lib/actions/get_products__id__options__option_id__values__value_id__json.js",
+            "title": "Create a new Product Option Value.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_products__id__options__option_id__values__value_id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_products__id__options__option_id__values__value_id__json": {
+            "main": "./lib/actions/put_products__id__options__option_id__values__value_id__json.js",
+            "title": "Modify an existing Product Option Value.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_products__id__options__option_id__values__value_id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_products__id__variants_json": {
+            "main": "./lib/actions/get_products__id__variants_json.js",
+            "title": "Retrieve all Product Variants.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_products__id__variants_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_products__id__variants_json": {
+            "main": "./lib/actions/post_products__id__variants_json.js",
+            "title": "Create a new Product Variant.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_products__id__variants_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_products__id__variants_count_json": {
+            "main": "./lib/actions/get_products__id__variants_count_json.js",
+            "title": "Count all Product Variants.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_products__id__variants_count_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_products__id__variants__variant_id__json": {
+            "main": "./lib/actions/get_products__id__variants__variant_id__json.js",
+            "title": "Retrieve a single Product Variant.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_products__id__variants__variant_id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_products__id__variants__variant_id__json": {
+            "main": "./lib/actions/put_products__id__variants__variant_id__json.js",
+            "title": "Modify an existing Product Variant.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_products__id__variants__variant_id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_promotions_json": {
+            "main": "./lib/actions/get_promotions_json.js",
+            "title": "Retrieve all Promotions.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_promotions_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_promotions_json": {
+            "main": "./lib/actions/post_promotions_json.js",
+            "title": "Create a new Promotion.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_promotions_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_promotions__id__json": {
+            "main": "./lib/actions/delete_promotions__id__json.js",
+            "title": "Delete an existing Promotion.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_promotions__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_promotions__id__json": {
+            "main": "./lib/actions/get_promotions__id__json.js",
+            "title": "Retrieve a single Promotion.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_promotions__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_promotions__id__json": {
+            "main": "./lib/actions/put_promotions__id__json.js",
+            "title": "Update a Promotion.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_promotions__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_store_info_json": {
+            "main": "./lib/actions/get_store_info_json.js",
+            "title": "Retrieve Store Information",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_store_info_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_store_languages_json": {
+            "main": "./lib/actions/get_store_languages_json.js",
+            "title": "Retrieve Store Languages",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_store_languages_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_taxes_json": {
+            "main": "./lib/actions/get_taxes_json.js",
+            "title": "Retrieve all Taxes.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_taxes_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_taxes_json": {
+            "main": "./lib/actions/post_taxes_json.js",
+            "title": "Create a new Tax.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_taxes_json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_taxes__id__json": {
+            "main": "./lib/actions/get_taxes__id__json.js",
+            "title": "Retrieve a single Tax information.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_taxes__id__json.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

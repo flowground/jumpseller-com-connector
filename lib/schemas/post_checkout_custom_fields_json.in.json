@@ -1,0 +1,70 @@
+{
+    "type": "object",
+    "properties": {
+        "login": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "authtoken": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "checkout_custom_field": {
+                    "properties": {
+                        "area": {
+                            "description": "Area of the CheckoutCustomField",
+                            "enum": [
+                                "contact",
+                                "billing_shipping",
+                                "other"
+                            ],
+                            "type": "string"
+                        },
+                        "custom_field_select_options": {
+                            "description": "The values for the CheckoutCustomField selection",
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "deletable": {
+                            "default": false,
+                            "description": "True if the CheckoutCustomField can be removed from the store",
+                            "type": "boolean"
+                        },
+                        "label": {
+                            "description": "Label given to the CheckoutCustomField",
+                            "type": "string"
+                        },
+                        "position": {
+                            "description": "Position of the CheckoutCustomField",
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "required": {
+                            "default": false,
+                            "description": "True if the CheckoutCustomField is mandatory",
+                            "type": "boolean"
+                        },
+                        "type": {
+                            "description": "Type of the CheckoutCustomField",
+                            "enum": [
+                                "text",
+                                "select",
+                                "input",
+                                "checkbox"
+                            ],
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+        "login": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "authtoken": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "category_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

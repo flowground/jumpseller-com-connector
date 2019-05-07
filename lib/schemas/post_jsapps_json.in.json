@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "properties": {
+        "login": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "authtoken": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "element": {
+                    "description": "Element of Template to inject HTML",
+                    "type": "string"
+                },
+                "template": {
+                    "description": "Template of Store Theme to inject HTML",
+                    "type": "string"
+                },
+                "url": {
+                    "description": "Url of the HTML to inject",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

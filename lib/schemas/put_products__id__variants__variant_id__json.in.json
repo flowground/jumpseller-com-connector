@@ -1,0 +1,64 @@
+{
+    "type": "object",
+    "properties": {
+        "login": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "authtoken": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "variant_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "properties": {
+                "variant": {
+                    "properties": {
+                        "id": {
+                            "description": "Unique identifier of the product",
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "image_id": {
+                            "description": "Unique identifier of the product image to associate with this variant",
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "price": {
+                            "description": "Price of the product",
+                            "format": "float",
+                            "type": "number"
+                        },
+                        "sku": {
+                            "description": "Stock Keeping Unit of the Product's Variant",
+                            "type": "string"
+                        },
+                        "stock": {
+                            "default": 100,
+                            "description": "Quantity in stock for the Product's Variant",
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "stock_unlimited": {
+                            "description": "True if the Product's Variant has unlimited stock",
+                            "type": "boolean"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

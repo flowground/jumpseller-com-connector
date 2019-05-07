@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "properties": {
+        "login": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "authtoken": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "category": {
+                    "properties": {
+                        "id": {
+                            "description": "Unique identifier of the Category",
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "name": {
+                            "description": "Name of the Category",
+                            "type": "string"
+                        },
+                        "parent_id": {
+                            "description": "Unique identifier of the Parent Category",
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "permalink": {
+                            "description": "Category unique URL path",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

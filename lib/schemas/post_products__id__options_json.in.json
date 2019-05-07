@@ -1,0 +1,49 @@
+{
+    "type": "object",
+    "properties": {
+        "login": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "authtoken": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "properties": {
+                "option": {
+                    "properties": {
+                        "name": {
+                            "description": "Name of the product option",
+                            "type": "string"
+                        },
+                        "option_type": {
+                            "description": "Type of the product option",
+                            "enum": [
+                                "option",
+                                "input",
+                                "text",
+                                "file"
+                            ],
+                            "type": "string"
+                        },
+                        "position": {
+                            "description": "Position of the product option",
+                            "format": "int32",
+                            "type": "integer"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

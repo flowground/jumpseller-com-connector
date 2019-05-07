@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "properties": {
+        "login": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "authtoken": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "sku": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

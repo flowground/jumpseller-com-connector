@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "login": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "authtoken": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "limit": {
+            "required": false,
+            "type": "integer",
+            "format": "integer"
+        },
+        "page": {
+            "required": false,
+            "type": "integer",
+            "format": "integer"
+        }
+    }
+}

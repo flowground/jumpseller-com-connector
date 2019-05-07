@@ -1,0 +1,138 @@
+{
+    "type": "object",
+    "properties": {
+        "login": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "authtoken": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "properties": {
+                "customer": {
+                    "properties": {
+                        "billing_address": {
+                            "properties": {
+                                "address": {
+                                    "description": "Address of the Customer's Billing Address",
+                                    "type": "string"
+                                },
+                                "city": {
+                                    "description": "City of the Customer's Billing Address",
+                                    "type": "string"
+                                },
+                                "country": {
+                                    "description": "Country of the Customer's Billing Address (ISO 3166-1 alpha-2)",
+                                    "type": "string"
+                                },
+                                "municipality": {
+                                    "description": "Municipality of the Customer's Billing Address",
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "description": "Name of the Customer's Billing Address",
+                                    "type": "string"
+                                },
+                                "postal": {
+                                    "description": "Postal code of the Customer's Billing Address",
+                                    "type": "string"
+                                },
+                                "region": {
+                                    "description": "Region of the Customer's Billing Address (Use the FIPS standard - http://www.geonames.org/countries/)",
+                                    "type": "integer"
+                                },
+                                "surname": {
+                                    "description": "Surname of the Customer's Billing Address",
+                                    "type": "string"
+                                },
+                                "taxid": {
+                                    "description": "Tax id of the Customer's Billing Address",
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "email": {
+                            "description": "Email of the Customer",
+                            "type": "string"
+                        },
+                        "id": {
+                            "description": "Unique identifier of the Customer",
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "password": {
+                            "description": "Password",
+                            "type": "string"
+                        },
+                        "password_confirmation": {
+                            "description": "Password Confirmation",
+                            "type": "string"
+                        },
+                        "phone": {
+                            "description": "Phone of the Customer",
+                            "type": "string"
+                        },
+                        "shipping_address": {
+                            "properties": {
+                                "address": {
+                                    "description": "Address of the Customer's Shipping Address",
+                                    "type": "string"
+                                },
+                                "city": {
+                                    "description": "City of the Customer's Shipping Address",
+                                    "type": "string"
+                                },
+                                "country": {
+                                    "description": "Country of the Customer's Shipping Address (ISO 3166-1 alpha-2)",
+                                    "type": "string"
+                                },
+                                "municipality": {
+                                    "description": "Municipality of the Customer's Shipping Address",
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "description": "Name of the Customer's Shipping Address",
+                                    "type": "string"
+                                },
+                                "postal": {
+                                    "description": "Postal code of the Customer's Shipping Address",
+                                    "type": "string"
+                                },
+                                "region": {
+                                    "description": "Region of the Customer's Shipping Address (Use the FIPS standard - http://www.geonames.org/countries/)",
+                                    "type": "integer"
+                                },
+                                "surname": {
+                                    "description": "Surname of the Customer's Shipping Address",
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "status": {
+                            "description": "Status of the Customer",
+                            "enum": [
+                                "approved",
+                                "pending",
+                                "disabled"
+                            ],
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

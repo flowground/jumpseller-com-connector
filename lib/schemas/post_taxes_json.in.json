@@ -1,0 +1,53 @@
+{
+    "type": "object",
+    "properties": {
+        "login": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "authtoken": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "field": {
+                    "properties": {
+                        "category_id": {
+                            "description": "Unique identifier of the category of the Tax",
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "country": {
+                            "description": "Country where the Tax applies",
+                            "type": "string"
+                        },
+                        "fixed": {
+                            "default": false,
+                            "description": "True if the tax has a fixed valued amount",
+                            "type": "boolean"
+                        },
+                        "region": {
+                            "description": "Region where the Tax applies",
+                            "type": "string"
+                        },
+                        "shipping": {
+                            "default": false,
+                            "description": "True if the tax should be applied to shipping costs",
+                            "type": "boolean"
+                        },
+                        "tax_amount": {
+                            "description": "Tax value for the given Tax",
+                            "format": "float",
+                            "type": "number"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        }
+    }
+}
